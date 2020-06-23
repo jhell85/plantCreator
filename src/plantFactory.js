@@ -1,5 +1,4 @@
-export { storeState };
-export { changeState };
+export { changeState, redFood, blueFood, greenFood, yellowFood, storeState };
 
 //how to store specific changes
 const storeState = () => {
@@ -20,9 +19,13 @@ const changeState = (prop) => {
     });
   };
 }
-//Functions in Function Factory
-// const feed = changeState("soil");
-// const blueFood = changeState("soil")(5);
+///function factory
+const redFood = changeState("soil")(-2);
+const blueFood = changeState("soil")(5);
+const greenFood = changeState("soil")(7);
+const yellowFood = changeState("soil")(-1);
+const stateChanger = storeState();
+
 
 
 // //Julia's elaborate Function Factory
